@@ -1,4 +1,4 @@
-# Create a cryptocurrency 101
+# Create your own cryptocurrency 101
 
 ## Notes
 
@@ -49,8 +49,8 @@
 
 ## On both nodes
 
-	1. tar -zxvf yourfakecoin.tar.gz
-	2. nohup ./fakecoind & (@TODO: Demonize the seed node)
+`tar -zxvf yourfakecoin.tar.gz`
+`nohup ./fakecoind &`
 
 ## Finally, on your local computer
 
