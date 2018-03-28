@@ -24,9 +24,7 @@
 		3. Leave genesis block blank
 	6. After generating the config file, manually edit the following values:
 		1. Set the value of "UPGRADE_HEIGHT_V3" to "2"
-		2. Remove ZAWY_DIFFICULTY_V2
-		3. Remove ZAWY_DIFFICULTY_V2
-		4. Add ZAWY_DIFFICULTY_BLOCK_INDEX to "10"
+		2. Add ZAWY_DIFFICULTY_BLOCK_INDEX to "10"
 	7. ./simplewallet --config-file configs/fakecoin.conf --generate-new-wallet genesis.wallet --password 12345
 	8. Copy new wallet address (For example, FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq)
 	9. ./forknoted --config-file configs/fakecoin.conf --print-genesis-tx --genesis-block-reward-address FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq
