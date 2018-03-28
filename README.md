@@ -50,6 +50,7 @@
 ## On both nodes
 
 `tar -zxvf yourfakecoin.tar.gz`
+
 `nohup ./fakecoind &`
 
 ## Finally, on your local computer
