@@ -18,17 +18,19 @@
 	2. sudo apt-get upgrade
 	3. wget https://github.com/forknote/forknote/releases/download/2.1.2/forknote-linux.tar.gz
 	4. tar -zxvf forknote-linux.tar.gz
-	5. Generate a config file online at http://forknote.net/create/
+	5. cd forknote-linux
+	6. mkdir configs
+	7. Generate a config file online at http://forknote.net/create/
 		1. Add seed nodes to the configuration
 		2. Leave premined address blank
 		3. Leave genesis block blank
-	6. After generating the config file, manually edit the following values:
+	8. After generating the config file, manually edit the following values:
 		1. Set the value of "UPGRADE_HEIGHT_V3" to "2"
 		2. Add ZAWY_DIFFICULTY_BLOCK_INDEX to "10"
-	7. ./simplewallet --config-file configs/fakecoin.conf --generate-new-wallet genesis.wallet --password 12345
-	8. Copy new wallet address (For example, FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq)
-	9. ./forknoted --config-file configs/fakecoin.conf --print-genesis-tx --genesis-block-reward-address FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq
-	10. Copy genesis block and add it to configs/fakecoin.conf, it should be without spaces or new lines, if there is a space in the genesis block you did something wrong (For example, GENESIS_COINBASE_TX_HEX=010a01ff0001e4e7cc99b3e6cc993302ebc5f7d91fcfd005a97c9edfa06caf50025b816603a59c60f5341c167a59df2b21015679abce2289c95178a76d111faaadacb3f71584555f395b16804819880085df)
+	9. ./simplewallet --config-file configs/fakecoin.conf --generate-new-wallet genesis.wallet --password 12345
+	10. Copy new wallet address (For example, FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq)
+	11. ./forknoted --config-file configs/fakecoin.conf --print-genesis-tx --genesis-block-reward-address FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq
+	12. Copy genesis block and add it to configs/fakecoin.conf, it should be without spaces or new lines, if there is a space in the genesis block you did something wrong (For example, GENESIS_COINBASE_TX_HEX=010a01ff0001e4e7cc99b3e6cc993302ebc5f7d91fcfd005a97c9edfa06caf50025b816603a59c60f5341c167a59df2b21015679abce2289c95178a76d111faaadacb3f71584555f395b16804819880085df)
 
 ## Now, on the same node
 
