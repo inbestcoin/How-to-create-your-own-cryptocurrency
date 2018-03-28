@@ -43,6 +43,7 @@
 	5. Create fakecoin.json, add the GENESIS_COINBASE_TX_HEX that you created in previous steps and make sure that your .conf and .json configuration file has the exact same values.
 	6. In the extensions section of the .json, add any additional extension you need on your coin (You can see the extensions at https://github.com/forknote/cryptonote-generator/tree/master/extensions) *
 	7. Add fakecoin.json to generator/configs
+	8. Edit `vargs.cfg` and add `export CORE_CONFIG_FILE="bytecoin-v2"`
 	8. bash generator.sh -f configs/fakecoin.json -c '-j2'
 	9. After the generation process is finished, use Cyberduck or any other SFTP client to transfer generated_files/builds/yourfakecoin.tar.gz to the second node
 
