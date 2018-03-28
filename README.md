@@ -20,26 +20,28 @@
 	4. tar -zxvf forknote-linux.tar.gz
 	5. cd forknote-linux
 	6. mkdir configs
-	7. Generate a config file online at http://forknote.net/create/
-		1. Add seed nodes to the configuration
-		2. Leave premined address blank
-		3. Leave genesis block blank
+	7. Generate a new config file at http://forknote.net/create/ for your coin.
+		1. Do not forget to add your seed nodes to the configuration file.
+		2. Leave the premined address blank.
+		3. Leave the genesis block blank.
 	8. After generating the config file, manually edit the following values:
-		1. Set the value of "UPGRADE_HEIGHT_V3" to "2"
-		2. Add ZAWY_DIFFICULTY_BLOCK_INDEX to "10"
-	9. ./simplewallet --config-file configs/fakecoin.conf --generate-new-wallet genesis.wallet --password 12345
-	10. Copy new wallet address (For example, FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq)
+		1. Set the value of "UPGRADE_HEIGHT_V3" to "2" *
+		2. Add ZAWY_DIFFICULTY_BLOCK_INDEX to "10" *
+	9. Add your configuration file to the "configs" folder.
+	10. ./simplewallet --config-file configs/fakecoin.conf --generate-new-wallet genesis.wallet --password 12345
+		1. Copy new wallet address (For example, FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq)
+		2. Type the "exit" command to close the simplewallet.
 	11. ./forknoted --config-file configs/fakecoin.conf --print-genesis-tx --genesis-block-reward-address FSgLDzpszX3S3RMK5p8PfCeY1eqchFSZsf5LcgPsA4EcJ6wpXrKGr7AViBqLATZ9K6CqQPgR8opQq6zY2HTCsVuWEANv6pq
-	12. Copy genesis block and add it to configs/fakecoin.conf, it should be without spaces or new lines, if there is a space in the genesis block you did something wrong (For example, GENESIS_COINBASE_TX_HEX=010a01ff0001e4e7cc99b3e6cc993302ebc5f7d91fcfd005a97c9edfa06caf50025b816603a59c60f5341c167a59df2b21015679abce2289c95178a76d111faaadacb3f71584555f395b16804819880085df)
+	12. Copy genesis block and add it to configs/fakecoin.conf, it should be without spaces or new lines, if there is a space in the genesis block you did something wrong.
 
 ## Now, on the same node
 
 	1. git clone https://github.com/forknote/cryptonote-generator
 	2. cd cryptonote-generator
 	3. bash install_dependencies.sh
-	4. sudo apt-get -y install libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev (@TODO: Merge pull request on forknote repository)
-	5. Create fakecoin.json, add the GENESIS_COINBASE_TX_HEX and make sure that your .conf and .json configuration file has the exact same values
-	6. In the extensions section of the .json, add any additional extension you need on your coin (You can see the extensions at https://github.com/forknote/cryptonote-generator/tree/master/extensions)
+	4. sudo apt-get -y install libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev (@TODO: Merge pull request on forknote repository) *
+	5. Create fakecoin.json, add the GENESIS_COINBASE_TX_HEX that you created in previous steps and make sure that your .conf and .json configuration file has the exact same values.
+	6. In the extensions section of the .json, add any additional extension you need on your coin (You can see the extensions at https://github.com/forknote/cryptonote-generator/tree/master/extensions) *
 	7. Add fakecoin.json to generator/configs
 	8. bash generator.sh -f configs/fakecoin.json -c '-j2'
 	9. After the generation process is finished, use Cyberduck or any other SFTP client to transfer generated_files/builds/yourfakecoin.tar.gz to the second node
