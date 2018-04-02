@@ -1,3 +1,8 @@
+
+
+¿Hablas español? Consulta la guía en español (y mucho más completa) dando clic [aquí.](https://inbest-my.sharepoint.com/:w:/g/personal/luis_cosio_inbest_me/Ef3qVFgV7wtBioyQH6Cv7j4B-mK-1vNQC0eMNzRuoOZbMg)
+
+
 # Create your own cryptocurrency 101
 
 ## Notes
